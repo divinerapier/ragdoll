@@ -1,24 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { PostProps, PostComponent } from './post';
 
 function App() {
+  const props: PostProps = { id: 0, title: "title", link_name: "link_name", content: undefined };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PostComponent id={props.id} title={props.title} link_name={props.link_name} ></PostComponent>
     </div>
   );
 }
